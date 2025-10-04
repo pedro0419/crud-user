@@ -7,9 +7,7 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    
     public function index()
     {
         $users = Usuarios::all();  
@@ -29,12 +27,14 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+
         Usuarios::create([
         'nome' => $request->nome,
         'cpf' => $request->cpf,
         ]);
 
         return redirect()->route('user.index')->with('success', 'Post criado com sucesso!');
+
     }
 
     /**
@@ -45,9 +45,6 @@ class UserController extends Controller
         
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id)
     {
         $user = Usuarios::findOrFail($id);
