@@ -1,4 +1,7 @@
-<h1>Editar Produto</h1>
+@extends('layouts.layout')
+
+@section('content')
+    <h1>Editar Usuário</h1>
 
     <form action="{{ route('user.update', $user->id) }}" method="POST">
         @csrf
@@ -10,9 +13,10 @@
         </div>
 
         <div>
-            <label for="preco">Preço:</label>
-            <input type="text" name="cpf" value="{{ old('preco', $user->cpf) }}">
+            <label for="cpf">CPF:</label>
+            <input type="text" name="cpf" value="{{ old('cpf', $user->cpf) }}">
         </div>
 
         <button type="submit">Salvar</button>
     </form>
+@endsection

@@ -1,4 +1,7 @@
- <h1>Produtos</h1>
+@extends('layouts.layout')
+
+@section('content')
+    <h1>Usuários</h1>
 
     <table border="1" cellpadding="10">
         <thead>
@@ -6,8 +9,7 @@
                 <th>ID</th>
                 <th>Nome</th>
                 <th>CPF</th>
-                <th>editar</th>
-                <th>excluir</th>
+                <th>Ações</th>
             </tr>
         </thead>
         
@@ -18,13 +20,11 @@
                         <td>{{ $user->nome }}</td>
                         <td>{{ $user->cpf }}</td>
                         <td>
-                            <a href="{{ route('user.edit', $user->id)}}"><button>editar</button></a>
-                        </td>
-                        <td>
+                            <a href="{{ route('user.edit', $user->id)}}"><button>Editar</button></a>
                             <form action="{{ route('user.delete', $user->id) }}" method="post">
                                 @method('delete')
                                 @csrf
-                                <input type="submit" value="excluir" >
+                                <input type="submit" value="Excluir" >
                             </form>
                         </td>
                     </tr>
@@ -32,4 +32,5 @@
         </tbody>
     </table>
 
-    <button><a href="{{ route('user.create') }}">cadastrar</a></button>
+    <button><a href="{{ route('user.create') }}">Cadastrar</a></button>
+@endsection

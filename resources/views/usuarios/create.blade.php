@@ -1,12 +1,16 @@
-<h1>cadastrar</h1>
+@extends('layouts.layout')
 
-<form action="{{ route('user.store') }}" method="POST">
-    @csrf
-    <label>nome:</label>
-    <input type="text" name="nome"><br>
+@section('content')
+    <h1>Cadastrar Usuário</h1>
 
-    <label>cpf:</label>
-    <textarea name="cpf"></textarea><br>
+    <form action="{{ route('user.store') }}" method="POST">
+        @csrf
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" /><br />
 
-    <button type="submit">enviar</button>
-</form>
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf" /><br />
+
+        <button type="submit">Enviar</button>
+    </form>
+@endsection
