@@ -1,9 +1,7 @@
-/* ========================================= */
-/* Estilos Gerais */
-/* ========================================= */
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: #f0f4f8; /* Fundo azul bem claro */
+    background-color: #f0f4f8; 
     color: #333;
     margin: 0;
     padding: 20px;
@@ -15,10 +13,7 @@ h1 {
     padding-bottom: 10px;
 }
 
-/* Tabela */
-/* ========================================= */
-/* Tabela (página index) */
-/* ========================================= */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -27,7 +22,7 @@ table {
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    overflow: hidden; /* Garante que o border-radius funcione nas bordas da tabela */
+    overflow: hidden; 
     border: none;
 }
 
@@ -38,22 +33,20 @@ table th, table td {
 }
 
 table th {
-    background-color: #0056b3; /* Azul escuro para o cabeçalho */
+    background-color: #0056b3; 
     color: #ffffff;
     font-weight: bold;
 }
 
 table tr:nth-of-type(even) {
-    background-color: #f8f9fa; /* Cor sutil para linhas pares */
+    background-color: #f8f9fa;
 }
 
 table tr:last-of-type td {
     border-bottom: none;
 }
 
-/* ========================================= */
-/* Formulários (páginas create e edit) */
-/* ========================================= */
+
 form {
     background-color: #ffffff;
     padding: 20px;
@@ -74,15 +67,13 @@ form input[type="text"], form textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Garante que o padding não afete a largura */
+    box-sizing: border-box; 
     margin-bottom: 15px;
 }
 
-/* ========================================= */
-/* Botões */
-/* ========================================= */
+
 button, input[type="submit"] {
-    background-color: #007bff; /* Azul primário */
+    background-color: #007bff; 
     color: white;
     padding: 10px 20px;
     border: none;
@@ -94,25 +85,24 @@ button, input[type="submit"] {
 }
 
 button:hover, input[type="submit"]:hover {
-    background-color: #0056b3; /* Azul mais escuro no hover */
+    background-color: #0056b3;
 }
 
-/* Estilo para o botão de cadastrar que é um link dentro de um botão */
+
 button a {
     color: white;
     text-decoration: none;
 }
 
-/* Estilo para o botão de excluir */
+
 form input[type="submit"] {
-    background-color: #dc3545; /* Vermelho para ações de perigo */
+    background-color: #dc3545; 
 }
 
 form input[type="submit"]:hover {
     background-color: #c82333;
 }
 
-/* Remove a borda padrão da tabela que você usava */
 table[border="1"] {
     border: none;
 }
